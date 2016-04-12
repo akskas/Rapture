@@ -13,6 +13,7 @@ build:
     image_name: drydock/u14jav
     image_tag: prod
     pull: true
+    options: "-e HOME=/root"
   ci:
     - cd Libs/
     - ./gradlew clean genAll install
