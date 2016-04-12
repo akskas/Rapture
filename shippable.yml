@@ -10,8 +10,8 @@ jdk:
 
 build:
   pre_ci_boot:
-    image_name: incapture/basetest
-    image_tag: latest
+    image_name: drydock/u12jav
+    image_tag: prod
     pull: true
     options: "-e HOME=/root"
   ci:
