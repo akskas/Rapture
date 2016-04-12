@@ -25,6 +25,7 @@ build:
     - echo "success"
   on_failure:
     - echo "failure"
+    - cd ..
     - cd root/src/github.com/akskas/Rapture/Apps/PluginInstaller/build/reports/tests
     - cat index.html
   cache: true
