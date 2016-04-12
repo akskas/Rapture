@@ -15,6 +15,7 @@ build:
     pull: true
     options: "-e HOME=/root"
   ci:
+    - export TERM=xterm
     - cd Libs/
     - ./gradlew clean genAll install
     - ./gradlew test
