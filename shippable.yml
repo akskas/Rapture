@@ -15,7 +15,7 @@ build:
     pull: true
     options: "-e HOME=/root"
   ci:
-    - sleep 600
+    - sleep 200
     - cd Libs/
     - ./gradlew clean genAll install
     - ./gradlew test
