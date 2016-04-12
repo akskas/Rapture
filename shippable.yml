@@ -15,10 +15,11 @@ build:
     pull: true
     options: "-e HOME=/root"
   ci:
-    - sleep 600
     - cd Libs/
     - ./gradlew clean genAll install
+    - free -m
     - ./gradlew test
+    - free -m  
     - cd ../Apps
     - ./gradlew clean installDist -x test
     - ./gradlew test
