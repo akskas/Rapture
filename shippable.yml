@@ -10,10 +10,9 @@ jdk:
 
 build:
   pre_ci_boot:
-    image_name: drydock/u12jav
+    image_name: drydock/u14jav
     image_tag: prod
     pull: true
-    options: "-e HOME=/root"
   ci:
     - cd Libs/
     - ./gradlew clean genAll install
