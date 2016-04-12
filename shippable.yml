@@ -21,6 +21,7 @@ build:
   ci:
     - cd Libs/
     - ./gradlew clean genAll install
+    - df -h
     - ./gradlew test
     - cd ../Apps
     - ./gradlew clean installDist -x test
@@ -29,6 +30,7 @@ build:
     - echo "success"
   on_failure:
     - echo "failure"
+    - df -h
   cache: true
 
 integrations:
