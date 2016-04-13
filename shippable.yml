@@ -18,6 +18,7 @@ build:
     - mkdir -p shippable/testresults
     - cd Libs/
     - ./gradlew clean genAll install
+    - pwd
     - ./test
     - cd ../Apps
     - ./gradlew clean installDist -x test
