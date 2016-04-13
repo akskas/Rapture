@@ -26,6 +26,8 @@ build:
     - echo "success"
   on_failure:
     - echo "failure"
+    
+-  cache: false
 
 integrations:
     hub:
