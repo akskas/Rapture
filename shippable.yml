@@ -17,7 +17,7 @@ build:
   ci:
     - mkdir -p shippable/testresults
     - cd Libs/
-    - ./gradlew test --with-xunit --xunit-file=shippable/testresults/gradletests.xml
+    - ./gradlew test --xunit-file=shippable/testresults/gradletests.xml
     - ./gradlew test
     - cd ../Apps
     - ./gradlew clean installDist -x test
