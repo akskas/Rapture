@@ -19,7 +19,6 @@ build:
     - cd Libs/
     - ./gradlew clean genAll install
     - ./gradlew test --with-xunit --xunit-file=shippable/testresults/gradletests.xml
-    - ./gradlew test
     - cd ../Apps
     - ./gradlew clean installDist -x test
     - ./gradlew test
