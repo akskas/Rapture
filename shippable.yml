@@ -19,7 +19,8 @@ build:
     - cd Libs/
     - ./gradlew clean genAll install
     - pwd
-    - ./test
+    - chmod +x test.sh
+    - ./test.sh
     - cd ../Apps
     - ./gradlew clean installDist -x test
     - ./gradlew test
