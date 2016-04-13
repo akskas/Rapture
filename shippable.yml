@@ -20,10 +20,10 @@ build:
     pull: true
     options: "-e HOME=/root"
   ci:
+    - mkdir -p shippable/testresults
     - cd Libs/
-    - ./gradlew clean genAll install
-    - df -h
-    - ./gradlew test
+    - ./gradlew clean genAll install 
+    - ./gradlew test --with-xunit --xunit-file=shippable/testresults/nosetests.xml
     - cd ../Apps
     - ./gradlew clean installDist -x test
     - ./gradlew test
