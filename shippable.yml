@@ -19,6 +19,7 @@ build:
     - cd Libs/
     - ./gradlew clean genAll install
     - pwd
+    - ls -al
     - chmod +x test.sh
     - ./test.sh
     - cd ../Apps
