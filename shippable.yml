@@ -18,9 +18,7 @@ build:
     - mkdir -p shippable/testresults
     - cd Libs/
     - ./gradlew clean genAll install
-    - cmd="{ ./gradlew test } || { echo 'this shit works'}"
-    - exec_cmd=$(cmd)
-    - cat /root/src/github.com/akskas/Rapture/Libs/RaptureCore/build/reports/tests/index.html
+    - ./test
     - cd ../Apps
     - ./gradlew clean installDist -x test
     - ./gradlew test
