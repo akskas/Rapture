@@ -15,9 +15,9 @@ build:
     pull: true
     options: "-e HOME=/root"
   ci:
-    - sleep 200
+    - mkdir -p shippable/testresults
     - cd Libs/
-    - ./gradlew clean genAll install
+    - ./gradlew test --with-xunit --xunit-file=shippable/testresults/gradletests.xml
     - ./gradlew test
     - cd ../Apps
     - ./gradlew clean installDist -x test
